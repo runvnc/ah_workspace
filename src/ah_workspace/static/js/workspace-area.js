@@ -40,7 +40,7 @@ class WorkspaceArea extends LitElement {
       <div class="workspace-content">
         <iframe 
           srcdoc=${this.content}
-          sandbox="allow-scripts allow-same-origin"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"
         ></iframe>
       </div>
     `;
