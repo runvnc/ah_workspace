@@ -1,0 +1,6 @@
+{
+  "name": "Workspace",
+  "version": "1.0.0",
+  "description": "Adds a workspace area between file tree and chat",
+  "services": []
+}
