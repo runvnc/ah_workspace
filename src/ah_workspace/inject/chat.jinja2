@@ -1,5 +1,4 @@
 {% block head_scripts %}
-  {{ super() }}
   <script type="module" src="/ah_workspace/static/js/workspace.js"></script>
   <script type="module" src="/ah_workspace/static/js/workspace-area.js"></script>
   <style>
@@ -27,7 +26,8 @@
   </style>
 {% endblock %}
 
-{% block content %}
+{% block insert %}
+  Hello from workspace
   <div class="workspace-container">
     <workspace-area></workspace-area>
   </div>
