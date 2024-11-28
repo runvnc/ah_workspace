@@ -19,11 +19,6 @@ class WorkspaceArea extends LitElement {
       height: 100%;
       overflow-y: auto;
     }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
   `;
 
   constructor() {
@@ -32,17 +27,17 @@ class WorkspaceArea extends LitElement {
   }
 
   setContent(content) {
+    console.log("Setting content", content);
     this.content = content;
   }
 
   render() {
-    return html`
-      <div class="workspace-content">
-        <iframe 
-          srcdoc=${this.content}
-          sandbox="allow-scripts allow-same-origin"
-        ></iframe>
-      </div>
+    // if this.content is not a string, skip
+    if (typeof this.content !== 'string') {
+      return html`<div class="welcome">Workspace Area - Content will appear here</div>`
+    }
+    return unsafeHTML`
+      <iframe class="workspace-content" srcdoc="${this.content}"></iframe>
     `;
   }
 }

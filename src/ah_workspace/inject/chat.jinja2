@@ -19,19 +19,17 @@
       padding: 20px;
     }
     .main {
-      width: 300px; /* Fixed width for chat */
+      width: 600px; /* Fixed width for chat */
       overflow-y: hidden;
       height: 100vh;
+      flex: none;
+      display: block;
     }
   </style>
 {% endblock %}
 
 {% block insert %}
-  Hello from workspace
   <div class="workspace-container">
     <workspace-area></workspace-area>
-  </div>
-  <div class="main">
-    <chat-ai sessionid="{{ log_id }}" agent_name="{{ agent_name }}"></chat-ai>
   </div>
 {% endblock %}

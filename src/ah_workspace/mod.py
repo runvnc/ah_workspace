@@ -8,7 +8,7 @@ async def update_workspace(content, context=None):
     content (str): HTML content to display in the workspace area
     
     Returns:
-    dict: Command result for frontend with command name and content
+    str: HTML content to display in the workspace area
 
     Example:
     { "update_workspace": { 
@@ -20,7 +20,4 @@ async def update_workspace(content, context=None):
         END_RAW
     } }
     """
-    return {
-        'command': 'update_workspace',
-        'content': content
-    }
+    return None
