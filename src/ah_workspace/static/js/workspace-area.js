@@ -8,19 +8,17 @@ class WorkspaceArea extends LitElement {
 
   static styles = css`
     :host {
-      display: block;
-      height: 100%;
+      display: flex;
+      flex: 1;
       background: var(--workspace-bg, var(--background-color, #1e1e1e));
       color: var(--workspace-text, var(--text-color, #e0e0e0));
-      box-sizing: border-box;
     }
     .workspace-content {
-      height: 100%;
-      overflow-y: auto;
+      flex: 1;
+      display: flex;
     }
     iframe {
-      width: 100%;
-      height: 100%;
+      flex: 1;
       border: none;
       background: inherit;
       color: inherit;
@@ -37,6 +35,11 @@ class WorkspaceArea extends LitElement {
           background: var(--workspace-bg, var(--background-color, #1e1e1e));
           color: var(--workspace-text, var(--text-color, #e0e0e0));
           font-family: system-ui, -apple-system, sans-serif;
+          height: 100%;
+          box-sizing: border-box;
+        }
+        html {
+          height: 100%;
         }
         a {
           color: var(--link-color, #58a6ff);
@@ -66,6 +69,11 @@ class WorkspaceArea extends LitElement {
             background: var(--workspace-bg, var(--background-color, #1e1e1e));
             color: var(--workspace-text, var(--text-color, #e0e0e0));
             font-family: system-ui, -apple-system, sans-serif;
+            height: 100%;
+            box-sizing: border-box;
+          }
+          html {
+            height: 100%;
           }
           a {
             color: var(--link-color, #58a6ff);
